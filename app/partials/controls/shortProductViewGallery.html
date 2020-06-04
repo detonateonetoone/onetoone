@@ -1,0 +1,17 @@
+<div class="451qa_prod_item row">
+    <div class="col-xs-12 text-center">
+        <a href="{{LineItem.Product.Type == 'Kit' ? 'kit' : 'product'}}/{{LineItem.Product.InteropID}}">
+            <figure ng-show="LineItem.Variant.SmallImageUrl || LineItem.Product.SmallImageUrl" >
+                <img ng-src="{{LineItem.Variant.SmallImageUrl || LineItem.Product.SmallImageUrl}}"/>
+            </figure>
+            <div class="empty" ng-hide="LineItem.Variant.SmallImageUrl || LineItem.Product.SmallImageUrl">
+                <span class="fa empty"><i class="fa fa-camera"></i></span>
+            </div>
+            <div class="product-hover">
+                
+                    <p class="text-center" style="font-weight: bold; font-family: 'Raleway', sans-serif; font-size: 20px; ">{{LineItem.Product.Name}}</p>
+              
+            </div>
+        </a>
+    </div>
+</div>
